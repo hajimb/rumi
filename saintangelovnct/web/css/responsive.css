@@ -1,0 +1,919 @@
+/**
+ * The stylesheet for displaying on mobile device.
+ *
+ * @package Contractor
+ * @author  KingKongThemes
+ * @link	http://www.kingkongthemes.com
+/*--------------------------------------------------------------
+	CSS Overview
+---------------------------------------------------------------
+
+	1. Max Screen 1170px
+	2. Max Screen 1024px
+		2.1 Container
+		2.2 Header
+		2.3 Body
+		2.4 Search box
+		2.5 Menu
+		2.6 Portfolio Free Style
+		2.7 Title bar
+	3. Max Screen 800px
+	4. Max Screen 767
+	5. Screen between 568px to 767px
+	6. Max Screen 568px
+	7. Max Screen 320px
+	8. Min Screen 1024px
+	9. Screen between 569px to 1024px
+	11. Screen between 800px to 1024
+	11. Screen between 320px to 413
+
+---------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	1. Max Screen 1170px
+--------------------------------------------------------------*/
+
+	.slider-caption {
+		padding-left:0;
+		font-size:20px;
+	}
+@media only screen and (max-width: 1170px), (max-device-width: 1170px) {
+
+
+	.slider-caption {
+		padding-left:0;
+		font-size:18px;
+	}
+	.phoneno{
+		margin-top:8px;font-size:16px !important ;
+	}
+	.phoneno_offer{
+		margin-top:8px;font-size:20px !important ;
+	}
+	/*----------- 1.1 Body -----------*/
+	body:not(.page):not(.post) .k2t-content,
+	body:not(.page):not(.post) .k2t-title-bar{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	/*----------- 1.2 Visual Composer -----------*/
+	.vc_row:not(.row-fullwidth){
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.vc_row:not(.row-fullwidth) .vc_row{
+		margin-left: -15px !important;
+		margin-right: -15px !important;
+	}
+}
+
+/*--------------------------------------------------------------
+	2. Max Screen 1024px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 1024px), (max-device-width: 1024px) {
+
+
+	.slider-caption {
+		padding-left:0;
+		font-size:12px;
+	}
+	/*----------- 2.1 Container -----------*/
+	.k2t-container {
+		width: 100%;
+	}
+
+	/*----------- 2.2 Header -----------*/
+	.k2t-header > *:not(.k2t-header-m) {
+		display: none;
+	}
+	.phone_no, .phoneno_offer{
+		display:block !important;	
+	}
+	.phoneno, .phoneno_offer{
+		margin-top:8px;
+		color:#fff;
+		font-size:14px !important;	
+	}
+	.offer{
+		color:#000 !important;
+	}
+
+
+	.k2t-header-m {
+		display: inline-block;
+		z-index: 1000;
+		width: 100%;
+		background: #000;
+	}
+
+	/*----------- 2.3 Body -----------*/
+	body {
+		right: auto;
+		left: 0;
+	}
+	body.nav-is-visible {
+		left: 260px;
+	}
+
+	/*----------- 2.4 Search box -----------*/
+	.k2t-right-m .search-box{
+		margin: 15px;
+	}
+
+	/*----------- 2.5 Menu -----------*/
+	.m-trigger {
+		height: 30px;
+		width: 30px;
+		z-index: 100;
+		position: relative;
+		display: inline-block;
+		top:10px;
+		margin:0 5px;
+		cursor: pointer;
+	}
+	.m-trigger:hover span,
+	.m-trigger:hover span:before,
+	.m-trigger:hover span:after {
+		background-color: #F71426
+	}
+	.m-trigger span,
+	.m-trigger span:before,
+	.m-trigger span:after {
+		background-color: #767676;
+		content: "";
+		display: block;
+		height: 3px;
+		width: 14px;
+	}
+	.m-trigger span {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform:    translate(-50%, -50%);
+		-ms-transform:     translate(-50%, -50%);
+		-o-transform:      translate(-50%, -50%);
+		transform:         translate(-50%, -50%);
+	}
+	.m-trigger span:before {
+		margin-top: -5px;
+		position: absolute;
+	}
+	.m-trigger span:after {
+		margin-top: 5px;
+		position: absolute;
+	}
+	.m-trigger.open span {
+		background-color: transparent;
+		left: 54%;
+	}
+	.m-trigger.open span:before,
+	.m-trigger.open span:after {
+		width: 14px;
+		-webkit-transform: rotate(45deg);
+		-moz-transform:    rotate(45deg);
+		-ms-transform:     rotate(45deg);
+		-o-transform:      rotate(45deg);
+		transform:         rotate(45deg);
+		-webkit-transform-origin: 0 50%;
+		-ms-transform-origin:     0 50%;
+		transform-origin:         0 50%;
+	}
+	.m-trigger.open span:after {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform:    rotate(-45deg);
+		-ms-transform:     rotate(-45deg);
+		-o-transform:      rotate(-45deg);
+		transform:         rotate(-45deg);
+	}
+	.nav-is-hide,
+	.menu-mobile-wrap,
+	.menu-mobile-wrap ul,
+	.k2t-menu-m .menu,
+	.k2t-menu-m .menu ul {
+		-webkit-transition: all .4s ease-in-out;
+		-moz-transition:    all .4s ease-in-out;
+		transition:         all .4s ease-in-out;
+	}
+	.wpb_content_element {
+		margin-bottom: 0px;
+	}
+		/* Is active mobile menu on admin
+		---------------------------- */
+	.admin-bar .menu-mobile-wrap,
+	.admin-bar .menu-mobile-wrap ul {
+		margin-top: 32px;
+	}
+	.menu-mobile-wrap {
+		background: #2e3233;
+		left: -260px;
+		z-index: 0;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+	}
+	.menu-mobile-wrap,
+	.menu-mobile-wrap ul {
+		margin: 0;
+		width: 260px;
+		height: 100%;
+		list-style: none;
+	}
+	.menu-mobile-wrap > ul{
+		position: fixed;
+		top: 0;
+		left: -260px;
+	}
+	.menu-mobile-wrap.active > ul{ 
+		left: 0;
+	}
+	.menu-mobile-wrap > ul ul{
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.menu-mobile-wrap ul ul,
+	.menu-mobile-wrap:not(.active) ul ul.is-visible,
+	.menu-mobile-wrap > ul.is-hide,
+	.menu-mobile-wrap ul ul.is-hide  {
+		left: -260px;
+	}
+	.menu-mobile-wrap.active,
+	.menu-mobile-wrap ul ul.is-visible {
+		left: 0;
+	}
+	.menu-mobile-wrap ul li {
+
+		position: relative;
+	}
+	.menu-mobile-wrap ul li a {
+		font-size: 14px;
+		font-weight: 400;
+		border-bottom: 1px solid #3a3f40;
+		padding: 10px;
+		display: block;
+		color: #fff;
+	}
+	.menu-mobile-wrap ul .sub-open {
+		background: #464c4e;
+		display: none;
+		height: 24px;
+		line-height: 22px;
+		position: absolute;
+		right: 9px;
+		text-align: center;
+		bottom: 12px;
+		width: 24px;
+		cursor: pointer;
+	}
+	.submenu{
+	margin-left:20px !important;
+	}
+	.menu-mobile-wrap ul .children > .sub-open {
+		display: block;
+	}
+	.menu-mobile-wrap ul .menu-back {
+		display: none;
+	}
+	.menu-mobile-wrap ul li.children > ul.is-visible > li:first-child .menu-back {
+		display: block;
+	}
+
+		/* No active mobile menu
+		---------------------------- */
+	.admin-bar .k2t-menu-m div.menu {
+		margin-top: 32px;
+	}
+	.k2t-menu-m > div.menu {
+		background: #2e3233;
+		left: -260px;
+		z-index: 0;
+		overflow: hidden;
+		height: 100vh;
+		position: fixed;
+		margin: 0;
+		width: 260px;
+		top: 0;
+	}
+	.k2t-menu-m div.menu > ul{
+		overflow-y: auto;
+		height: 100vh;
+	}
+	.k2t-menu-m div.menu ul {
+		margin: 0;
+		width: 260px;
+		list-style: none;
+	}
+	.k2t-menu-m div.menu ul ul.children{
+		height: 0;
+		display: none;
+	}
+	.k2t-menu-m div.menu ul ul,
+	.k2t-menu-m div.menu:not(.active) ul ul.is-visible,
+	.k2t-menu-m div.menu > ul.is-hide,
+	.k2t-menu-m div.menu ul ul.is-hide  {
+		left: -260px;
+	}
+	.k2t-menu-m div.menu.active,
+	.k2t-menu-m div.menu ul ul.is-visible {
+		left: 0;
+	}
+	.k2t-menu-m div.menu ul li {
+		position: relative;
+	}
+	.k2t-menu-m div.menu ul li a {
+		font-size: 14px;
+		font-weight: 400;
+		border-bottom: 1px solid #3a3f40;
+		padding: 10px;
+		display: block;
+		color: #fff;
+	}
+	.k2t-menu-m div.menu ul .sub-open {
+		background: #464c4e;
+		display: none;
+		height: 24px;
+		line-height: 22px;
+		position: absolute;
+		right: 9px;
+		text-align: center;
+		bottom: 12px;
+		width: 24px;
+		cursor: pointer;
+	}
+	.k2t-menu-m div.menu ul .children > .sub-open {
+		display: block;
+	}
+	.k2t-menu-m div.menu ul .menu-back {
+		display: none;
+	}
+	.k2t-menu-m div.menu ul ul li:first-child .menu-back {
+		display: block;
+	}
+	.k2t-header-m > div {
+		width: 100%;
+		float: left;
+	}
+	.k2t-header-m .k2t-logo-m {
+		text-align: center;
+		margin: 5px 0;
+	}
+	.k2t-right-m {
+		text-align: right;
+	}
+	.k2t-right-m > * {
+		display: inline-block;
+	}
+
+	/*----------- 2.6 Portfolio Free Style -----------*/
+	.isotope-gallery .isotope-selector,
+	.isotope-gallery .isotope-selector.width-2 {
+		width: 25% !important;
+	}
+	.article-inner {
+		padding: 0 !important;
+	}
+	/*----------- 2.7 Title bar -----------*/
+	.k2t-title-bar{
+		padding-top: 160px !important;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	/*-----------------------2.8 Counter------------------------------*/
+	.counter {
+		padding-top: 100px !important;
+	}
+	/*----------------- 2.9 Element--------------------------*/
+	.k2t-member.style-4 .text > div {
+		top: 0 !important;
+	}
+	/*----------------- 2.10 Woocommerce-------------------------*/
+	.right-sidebar .k2t-shop, .k2t-shop {
+		width: 100% !important;		
+		padding: 0 !important;
+	}
+	/*----------------------2.11 Footer---------------------------*/
+	.k2t-bottom,
+	.k2t-info {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.k2t-content.section {
+		padding: 0 !important;
+	}
+	.k2t-content .background-dark p {
+		padding-left: 15px !important;
+	}
+
+}
+
+/*--------------------------------------------------------------
+	3. Max Screen 800px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 800px) and (max-device-width: 800px) {
+	.slider-caption {
+		font-size:12px;
+	}
+
+	.k2t-right-m .search-box{
+		margin: 15px;
+	}
+	.k2t-body section.container > #main, .k2t-body section.container > div.k2t-shop-sidebar{
+		width: 100%;
+		clear: both;
+		padding-right: 0;
+	}
+	.right-sidebar .k2t-blog,
+	.left-sidebar .k2t-blog,
+	.right-sidebar .k2t-main,
+	.left-sidebar .k2t-main,
+	.k2t-body .k2t-sidebar,
+	.archive .k2t-main {
+		width: 100% !important;
+	}
+	div:not(.offcanvas-sidebar) .k2t-sidebar .widget {
+		width: 50%;
+		float: left;
+		padding-left: 15px;
+	}
+	.k2t-bottom .col-3 {
+		min-height: 300px;
+	}
+	.b-mansory [class*="column-"] .grid-sizer {
+		width: 50%;
+	}
+	.b-mansory .mansory-layout[class*="column-"] .hentry {
+		width: 48%;
+	}
+	.k2t-logo-m .k2t-logo {
+		margin: auto;
+	}
+	.k2t-bottom .k2t-row {
+		margin: 0 5px;
+	}
+	.single .k2t-content,
+	.blog .k2t-content,
+	.archive .k2t-content,
+	.k2t-info {
+		padding: 20px;
+	}
+	.right-sidebar .k2t-blog,
+	.left-sidebar .k2t-blog,
+	.left-sidebar .k2t-main,
+	.k2t-main,
+	.k2t-sidebar .widget:nth-child(2n),
+	.two-sidebars .k2t-sidebar,
+	.b-mansory.fullwidth .k2t-wrap {
+		padding: 0;
+	}
+	.k2t-sidebar .widget {
+		padding-right: 15px;
+	}
+	.wpcf7 .wpcf7-form > p{
+		margin-bottom: 25px;
+	}
+	/* WOOCOMERCE */
+	.woocommerce-page.columns-5 ul.products li.product,
+	.woocommerce.columns-5 ul.products li.product {
+		width: 48% !important;
+	}
+	.woocommerce-account .k2t-content .woocommerce {
+		width: auto;
+	}
+	/* Footer */
+	.k2t-main ul.info-footer {
+		text-align: center !important;
+	}
+	/*isotope*/
+	.isotope-grid .isotope-selector {
+		width: 48.33% !important;
+	}
+	/*---------------Blog-------------------------------*/
+	.b-masonry .masonry-layout.column-3 article {
+		width: 100% !important;
+		display: block;
+		float: left;
+	}
+	.b-masonry .masonry-layout.column-3 #post-108 {
+		left: 0 !important;
+		top: 970px !important;
+	}
+	.b-masonry .masonry-layout.column-3 #post-134 
+	.b-masonry .masonry-layout.column-3 #post-779,
+	.b-masonry .masonry-layout.column-3 #post-774,
+	.b-masonry .masonry-layout.column-3 #post-105,
+	.b-masonry .masonry-layout.column-3 #post-140,
+	.b-masonry .masonry-layout.column-3 #post-782,
+	.b-masonry .masonry-layout.column-3 #post-106,
+	.b-masonry .masonry-layout.column-3 #post-37,
+	.b-masonry .masonry-layout.column-3 #post-132 {
+		left: 0px !important;
+		top: 0px !important;
+	}
+	.b-masonry .masonry-layout.column-3 #post-105 {
+		z-index: 100 !important;
+	}
+	/*-------------------------Carousel----------------------------*/
+	.k2t-testimonial.style-3 .testimonial-content:after {
+		display: none;
+	}
+	.k2t-testimonial .style-3 {
+		background-color: #f5f5f5 !important;
+	}
+}
+/*--------------------------------------------------------------
+	4. Max Screen 767
+--------------------------------------------------------------*/
+@media only screen and (max-width: 767px) and (max-device-width: 767px) {
+
+	.slider-caption {
+		font-size:12px;
+	}
+
+	.hide-mobile{
+		display: none;
+	}
+	.wpb_wrapper > .vc_row{
+		margin-top: 0 !important;
+		margin-bottom: 20px !important;
+	}
+	.wpb_wrapper > .vc_row.no-margin-bottom, .vc_row.no-margin-bottom .wpb_column{
+		margin-bottom: 0px !important;
+	}
+	.vc_row .wpb_column{
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	/*portfolio*/
+	.isotope-gallery .isotope-selector, .isotope-gallery .isotope-selector.width-2 {
+		width: 33.33% !important; 
+	}
+	.article .post-thumbnail {
+		margin: 0px 17px 35px !important;
+	}
+	/* Footer */
+	.k2t-footer .k2t-info{
+		text-align: center;
+	}
+	.k2t-footer .k2t-info #footer-menu{
+		margin-top: 10px !important;
+		float: none;
+		display: inline-block;
+	}
+	/* WOOCOMERCE */
+	.woocommerce-page.columns-5 ul.products li.product,
+	.woocommerce.columns-5 ul.products li.product {
+		width: 100% !important;
+		list-style: none;
+	}
+	/*------------------Footer----------------------------*/
+	.k2t-wrap p {
+		width: 100% !important;
+		float: left;
+	}
+}
+/*--------------------------------------------------------------
+	5. Screen between 568px to 767px
+--------------------------------------------------------------*/
+@media only screen and (min-width: 569px) and (max-width: 767px) {
+	.k2t-right-m .search-box{
+		margin: 15px;
+	}
+	.admin-bar .menu-mobile-wrap,
+	.admin-bar .menu-mobile-wrap ul {
+		margin-top: 46px;
+	}
+	/* PORTFOLIO FREE STYLE */
+	.isotope-gallery .isotope-selector,
+	.isotope-gallery .isotope-selector.width-2 {
+		width: 50% !important;
+	}
+	.k2t-row [class*="col-"] {
+		float: none;
+	}
+	/*Images Element*/
+	.mobile-2-columns .images {
+		width: 50%;
+		text-align: center;
+		float: left;
+		padding: 15px;
+	}
+	.k2t-bottom .col-3 {
+		width: 50%;
+		float: left;
+	}
+	.isotope-grid .isotope-selector {
+	    width: 45.33% !important;
+	}
+}
+/*--------------------------------------------------------------
+	6. Max Screen 414px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 415px) and (max-device-width: 415px) {
+	.isotope-grid .isotope-selector {
+    	width: 100% !important;
+	}
+}
+/*--------------------------------------------------------------
+	6. Max Screen 568px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 568px) and (max-device-width: 568px) {
+	.k2t-right-m .search-box{
+		margin: 15px;
+	}
+	.k2t-header-m {
+		position: relative;
+	}
+	.k2t-title-bar{
+		padding-top: 60px !important;
+	}
+	div:not(.offcanvas-sidebar) .k2t-sidebar .widget,
+	.k2t-post-share .col-6 {
+		width: 100%;
+	}
+	.b-mansory .mansory-layout[class*="column-"] .hentry.large {
+		width: 98%;
+	}
+	.k2t-searchbox form {
+		width: 90%;
+		margin-left: -45%;
+	}
+	.k2t-sidebar .widget {
+		padding: 0;
+	}
+	.k2t-post-share .col-6 {
+		margin-bottom: 20px;
+	}
+	.k2t-social-share {
+		text-align: center;
+	}
+	.k2t-row.iconbox-element {
+		margin-top: -38px !important;
+	}
+
+	/* Blog */
+	.b-classic .k2t-meta > div.posted-info, .single .k2t-meta > div.posted-info{
+		display: none;
+	}
+	.b-classic .k2t-meta, .single .k2t-meta{
+		padding: 10px 15px;
+	}
+	.b-classic .k2t-meta .my, .single .k2t-meta .my{
+		font-size: 122%;
+	}
+	.b-classic .k2t-meta span.d, .single .k2t-meta span.d{
+		font-size: 300%;
+		line-height: 1em;
+	}
+
+	/* WOOCOMERCE */
+	.woocommerce-page ul.products li.product,
+	.woocommerce ul.products li.product {
+		width: 100% !important;
+	}
+
+	/* Contact form 7 */
+	.k2t-row [class*="col-"]{
+		width: 100%;
+	}
+
+	/* Heading */
+	.k2t-heading.has-border.heading .h::before, .k2t-heading.heading .h::after{
+		content: none;
+	}
+	.k2t-heading.has-border.heading .h span{
+		border: none;
+		padding: 0;
+		text-align: center;
+		padding: 15px;
+	}
+	/* Video Element*/
+	.k2t-row .video_lightbox {
+		text-align: center;
+	}
+	.k2t-row.customer-element {
+		background: none !important;
+		padding-bottom: 0px !important;
+	}
+	/* Images Element*/
+	.mobile-2-columns .images {
+		text-align: center;
+		padding: 10px;
+	}
+	.k2t-row .carousel {
+		padding-left: 20px !important;
+	}
+	/* Blog*/
+	.b-masonry .masonry-layout.column-3 {
+		height: 1553px !important;
+	}
+	.b-masonry .masonry-layout.column-3 #post-108 {
+		left: 0 !important;
+		top: 960px !important;
+	}
+}
+/*--------------------------------------------------------------
+	7. Max Screen 320px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 320px) and (max-device-width: 320px) {
+	.k2t-right-m .search-box{
+		margin: 15px;
+	}
+	.b-mansory .mansory-layout[class*="column-"] .hentry {
+		width: 100%;
+	}
+	.offcanvas-sidebar {
+		width: 280px;
+	}
+	.k2t-searchbox input[type="text"] {
+		font-size: 25px;
+	}
+	.k2t-searchbox #searchsubmit {
+		font-size: 15px;
+		top: -2px;
+	}
+	.k2t-social-share .social li {
+		margin: 5px;
+	}
+	.wpcf7 .wpcf7-form > p {
+		margin-bottom: 15px;
+	}
+	/* WOOCOMERCE */
+	.woocommerce-page.columns-5 ul.products li.product a.button,
+	.woocommerce.columns-5 ul.products li.product  a.button {
+		padding: 0 15px !important;
+	}
+	.woocommerce-account .k2t-content .woocommerce {
+		padding: 40px 15px;
+	}
+	.woocommerce div.product div.images img {
+	    display: block;
+	    width: 100%;
+	    height: auto;
+	    box-shadow: none;
+	}
+	.single-product .p-gallery .p-thumb .owl-wrapper, .single-product .p-gallery .p-thumb .owl-item {
+		width: 90% !important;
+	}
+	.woocommerce img, .woocommerce-page img {
+	    height: auto;
+	    max-width: 100%;
+	}
+	.woocommerce #content div.product .product_title,
+	.woocommerce div.product .product_title, 
+	.woocommerce-page #content div.product .product_title, 
+	.woocommerce-page div.product .product_title, 
+	.woocommerce #content div.product .p-rate-price, 
+	.woocommerce div.product .p-rate-price {
+		border-bottom: 1px solid #E0E0E0;
+		padding-bottom: 17px;
+		margin-bottom: 20px;
+		display: inline-block;
+		width: 100%;
+	}
+	.woocommerce #content div.product form.cart, 
+	.woocommerce div.product form.cart, 
+	.woocommerce-page #content div.product form.cart, 
+	.woocommerce-page div.product form.cart {
+		float: none !important;
+	}
+	.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
+		float: left !important;
+	}
+	/* PORTFOLIO FREE STYLE */
+	.isotope-gallery .isotope-selector,
+	.isotope-gallery .isotope-selector.width-2 {
+		width: 100% !important;
+	}
+	/*---------Element------------*/
+	.img_element {
+		text-align: center;
+		padding: 30px !important;
+	}
+	/* Footer */
+	.k2t-bottom .k2t-row > div{
+		width: 100% !important;
+		float: none;
+		margin-bottom: 20px;
+	}
+	.k2t-bottom .k2t-row [class*="col-"]{
+		width: 100%;
+	}
+	.k2t-bottom .about-us {
+		min-height: 50% !important;
+	}
+	.isotope-grid .isotope-selector {
+    	width: 100% !important;
+	}
+	/*-------------------------Blog---------------------------*/
+	.b-masonry .masonry-layout .hentry {
+		width: 100% !important;
+	}
+	.k2t-blog .column-3 {
+		height: 950px !important
+	}
+	/*------------------------Footer----------------------*/
+	#footer-menu li a {
+    font-size: 9px !important;
+	}
+}
+/*--------------------------------------------------------------
+	8. Min Screen 1024px
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) and (min-device-width: 1024px) {
+	.woocommerce #content div.product div.images,
+	 .woocommerce #content div.product div.summary, 
+	 .woocommerce div.product div.images, 
+	 .woocommerce div.product div.summary, 
+	 .woocommerce-page #content div.product div.images, 
+	 .woocommerce-page #content div.product div.summary, 
+	 .woocommerce-page div.product div.images, 
+	 .woocommerce-page div.product div.summary {
+	 	width: 48% !important;
+	 	float: left !important;
+	 }
+}
+/*--------------------------------------------------------------
+	9. Screen between 569px to 1024px
+--------------------------------------------------------------*/
+@media only screen and (min-width: 569px) and (max-width: 1024px) {	
+ 	.k2t-content .forcefullwidth_wrapper_tp_banner,
+ 	.k2t-content .fullwidthbanner-container {
+		margin-top: 100px !important;
+	}
+	.video_lightbox {
+		padding: 0 !important;
+		margin-bottom: -20px !important;
+	}
+	.k2t-row.rone {
+		padding-bottom: 35px !important;
+	}
+	.k2t-iconbox.layout-3 .title .h {
+		font-size: 15px !important;
+	}
+}
+/*--------------------------------------------------------------
+	10. Screen between 768x to 800px
+---------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+	.k2t-info .k2t-wrap {
+		text-align: center;
+	}
+	#footer-menu {
+		float: none;
+    	display: inline-block;
+	}
+}
+/*-----------------------------------------------------------------
+	11. Screen between 800px to 1024
+-----------------------------------------------------------------*/
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+	.isotope-grid .isotope-selector {
+	    width: 26.33% !important;
+	}
+	/*--------------------2.12 Blog----------------------*/
+	.b-masonry .masonry-layout.column-3 #post-105 {
+		top: 1395px !important;
+	}
+	.b-masonry .masonry-layout.column-3 #post-106 {
+		top: 940px !important
+	}
+	.b-masonry .masonry-layout.column-3 #post-774 {
+		top: 925px !important
+	}
+	.b-masonry .masonry-layout.column-3 #post-106 {
+		top: 940px !important
+	}
+	.b-masonry .masonry-layout.column-3 #post-37 {
+		top: 1390px !important
+	}
+	.b-masonry .masonry-layout.column-3 #post-786,
+	.b-masonry .masonry-layout.column-3 #post-779,
+	 {
+		margin-top: 20px;
+	}
+	.b-masonry .masonry-layout.column-3 #post-134 {
+		top: 0 !important;
+		left: 250px !important;
+	}
+	.b-masonry .masonry-layout.column-3 #post-106,
+	.b-masonry .masonry-layout.column-3 #post-108,
+	.b-masonry .masonry-layout.column-3 #post-140 {
+		left: 250px !important;
+	}
+	.b-masonry .masonry-layout.column-3 #post-132,
+	.b-masonry .masonry-layout.column-3 #post-782,
+	.b-masonry .masonry-layout.column-3 #post-37,
+	.b-masonry .masonry-layout.column-3 #post-774 {
+		left: 500px !important
+	}
+}
+/*-----------------------------------------------------------------
+	11. Screen between 320px to 413
+-----------------------------------------------------------------*/
+@media only screen and (min-width: 321px) and (max-width: 413px) {
+	.isotope-grid .isotope-selector {
+	    width: 33.33% !important;
+	}
+}

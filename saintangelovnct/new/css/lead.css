@@ -1,0 +1,61 @@
+
+
+/* Alert Boxes
+====================================*/
+.notification {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 15px;
+	position: relative;
+	padding: 14px 40px 14px 18px;
+	-webkit-box-shadow:  0px 1px 1px 0px rgba(180, 180, 180, 0.1);
+	box-shadow:  0px 1px 1px 0px rgba(180, 180, 180, 0.1);
+	display:none;
+}
+
+.notification p {margin: 0;}
+.notification span {font-weight: bold;}
+
+.notification.success {
+	background-color: #EBF6E0;
+	color: #5f9025;
+	border: 1px solid #b3dc82;
+}
+
+.notification.error {
+	background-color: #ffe9e9;
+	color: #de5959;
+	border: 1px solid #fbc4c4;
+	display:none;
+}
+
+.notification.warning {
+	background-color: #FBFADD;
+	color: #8f872e;
+	border: 1px solid #ded58a;
+}
+
+.notification.notice {
+	background-color: #E9F7FE;
+	color: #5091b2;
+	border: 1px solid #b6d7e8;
+}
+
+.notification.success .close,
+.notification.error .close,
+.notification.warning .close,
+.notification.notice .close {
+	padding: 0px 14px;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	display: block;
+	height: 8px;
+	weight: 8px;
+}
+
+.notification.success .close {background: url(../images/alert_boxes_close_ico.png) 0 -8px no-repeat;}
+.notification.error .close {background: url(../images/alert_boxes_close_ico.png) 0 0 no-repeat;}
+.notification.warning .close {background: url(../images/alert_boxes_close_ico.png) 0 -16px no-repeat;}
+.notification.notice .close {background: url(../images/alert_boxes_close_ico.png) 0 -24px no-repeat;}
